@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Frontend Project</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Layout Styles */
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .content {
+      flex-grow: 1;
+      padding: 20px;
+    }
+
+    /* Navigation Styles */
+    .nav-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-item {
+      margin-bottom: 10px;
+    }
+
+    .nav-link {
+      color: #fff;
+      text-decoration: none;
+      display: block;
+      padding: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    .nav-link:hover {
+      background-color: #555;
+    }
+
+    /* Content Styles */
+    h1 {
+      margin-top: 0;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+  </style>
+  <script>
+    // Function to display the selected content
+    function showContent(content) {
+      var contentDiv = document.getElementById('content');
+      contentDiv.innerHTML = content;
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <ul class="nav-list">
+        <!-- Clicking on a list item will call the showContent() function with the appropriate content -->
+        <li class="nav-item"><a href="#" class="nav-link" onclick="showContent('Home content')">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link" onclick="showContent('Contact information')">Contact</a></li>
+        <li class="nav-item"><a href="#" class="nav-link" onclick="showContent('Information content')">Information</a></li>
+        <li class="nav-item"><a href="#" class="nav-link" onclick="showContent('Guide content')">Guide</a></li>
+      </ul>
+    </div>
+    <div class="content" id="content">
+      <!-- Initial content, can be changed or left blank -->
+      <h1>Welcome!</h1>
+      <p>Please select a component from the left panel.</p>
+    </div>
+  </div>
+</body>
+</html>
